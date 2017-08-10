@@ -45,9 +45,20 @@ aside h3 {
 	border: 1px solid #b6b6b6;
 }
 
+article.well {
+	padding: .75em !important;
+}
+
+article.well {
+	margin-left: -1em;
+	margin-right: -1em;
+}
+
 article h1 {
-	font-family: 'Montserrat', sans-serif;C
+	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
+	margin: 0;
+	padding: 0;
 }
 
 nav {
