@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_formhelpers.html" import render_field %}
+{% from "_formhelpers.html" import render_field, render_submit %}
 
 {% block title %}
 	Update Draft
@@ -14,8 +14,8 @@
 			{{ render_field(form.slug, class="form-control") }}
 			{{ render_field(form.category, class="form-control") }}
 			{{ render_field(form.body, class="form-control") }}
-			{{ render_submit(form.update_draft, class="btn btn-lg btn-primary") }}
-			{{ render_submit(form.create_post, class="btn btn-lg btn-success") }}
+			{{ render_submit(form.update_draft, class="btn btn-md btn-primary inline") }}
+			{{ render_submit(form.create_post, class="btn btn-md btn-success inline") }}
 		</form>
         <script>
             CKEDITOR.replace('body', {height: 400});
