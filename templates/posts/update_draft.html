@@ -1,5 +1,5 @@
-{% extends "bootstrap/base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field %}
 
 {% block title %}
 	Update Draft
@@ -10,12 +10,12 @@
 		<form method="post" class="well" style="padding-bottom: 1em;">
 			<h2 class="form-signin-heading">Update Draft</h2>
 			{{ form.hidden_tag() }}
-			{{ wtf.form_field(form.title) }}
-			{{ wtf.form_field(form.slug) }}
-			{{ wtf.form_field(form.category) }}
-			{{ wtf.form_field(form.body) }}
-			{{ wtf.form_field(form.update_draft) }}
-			{{ wtf.form_field(form.create_post) }}
+			{{ render_field(form.title, class="form-control") }}
+			{{ render_field(form.slug, class="form-control") }}
+			{{ render_field(form.category, class="form-control") }}
+			{{ render_field(form.body, class="form-control") }}
+			<button class="btn btn-md btn-primary" type="submit">Update Draft</button>
+			<button class="btn btn-md btn-success" type="submit">Create Draft</button>
 		</form>
         <script>
             CKEDITOR.replace('body', {height: 400});
