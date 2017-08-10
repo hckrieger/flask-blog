@@ -14,7 +14,7 @@ Create Post
 			{{ render_field(form.slug, class="form-control") }}
 			{{ render_field(form.category, class="form-control") }}
 			{{ render_field(form.body, class="form-control") }}
-			<button class="btn btn-md btn-success" type="submit">Create Draft</button>
+			{{ render_submit(form.create_draft, class="btn btn-md btn-primary") }}
 		</form>
 		<script>
 			// Replace the <textarea id="editor1"> with a CKEditor
