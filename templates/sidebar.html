@@ -1,0 +1,31 @@
+<aside class="well">
+	<h3>About</h3>
+	<dl>
+		<dt>Hunter Krieger</dt>
+		<dd>Blogger,
+		Web Developer,
+		Gamer,
+		Bibliophile</dd>
+	</dl>
+</aside>
+
+<aside class="well">
+	<h3>Contact</h3>
+	<dl>
+		<dt>Email:</dt>
+		<dd>hunterk31@hotmail.com</dd>
+	</dl>
+	<dl>
+		<dt>Github</dt>
+		<dd><a target="_blank" href="https://github.com/hckscripter6">https://github.com/hckscripter6</a></dd>
+	</dl>
+</aside>
+
+<aside class="well">
+<h3>Posts</h3>
+	<ul>
+	{% for display in post %}
+		<li><a href="/{{ display.slug }}">{{ display.title }}</a></li>
+	{% endfor %}
+	</ul>
+</aside>

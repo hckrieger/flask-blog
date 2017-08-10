@@ -1,0 +1,75 @@
+form.login {
+	width: 30em;
+	margin: 0 auto;
+	border: 1px solid grey;
+	padding: 0 1em 1em 1em;
+	border-radius: .25em;
+	background-color: cornflowerblue;
+}
+
+div.jumbotron {
+	background-image: url("../images/books.jpg");
+	height: 18em;
+	text-align: center;
+	font-family: impact;
+	color: black;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	border-bottom: 1px solid #878787;
+	margin-bottom: 1em;
+}
+
+div.jumbotron h2 {
+	font-size: 3em;
+	letter-spacing: .05em;
+}
+
+nav a {
+	color: white !important;
+}
+
+.center {
+	text-align: center;
+}
+
+a.navbar-brand {
+	font-size: 1.75em;
+}
+
+aside h3 {
+	text-align: center;
+}
+
+.well {
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 1px solid #b6b6b6;
+}
+
+article h1 {
+	font-family: 'Montserrat', sans-serif;C
+	font-weight: bold;
+}
+
+nav {
+	background-color: black !important;
+	border: 1px solid black !important;
+	border-radius: 0 !important;
+}
+
+nav ul li {
+	color: white !important;
+}
+
+div.jumbotron {
+	margin-top: -1.4em;
+}
+
+ul li {
+	list-style-type: circle;
+	margin-bottom: .1em;
+	margin-left: -1.75em;
+}
+
+article p {
+	font-size: 1.1em;
+}
