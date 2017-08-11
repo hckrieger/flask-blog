@@ -21,6 +21,7 @@ div.jumbotron h2 {
 	font-size: 3em;
 	letter-spacing: .05em;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
 }
 
 nav a {
