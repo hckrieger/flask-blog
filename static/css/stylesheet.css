@@ -11,7 +11,6 @@ div.jumbotron {
 	background-image: url("../images/books.jpg");
 	height: 18em;
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;;
 	color: black;
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 	border-bottom: 1px solid #878787;
@@ -21,6 +20,7 @@ div.jumbotron {
 div.jumbotron h2 {
 	font-size: 3em;
 	letter-spacing: .05em;
+	font-family: 'Montserrat', sans-serif;
 }
 
 nav a {
