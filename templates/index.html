@@ -16,7 +16,7 @@
 				<h4>{{ display.created_at.strftime('%b %d, %Y') }}</h4>
 				<div class="body">
 					{{ display.body | truncate(1250) | safe }}
-				</div>
+				</div><a href="/{{ display.slug }}">Read More</a>
 			</article>
 		{% endfor %}
 	{% else %}
