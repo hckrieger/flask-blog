@@ -24,7 +24,7 @@ def login():
 				return redirect(url_for('dashboard'))
 	return render_template('login.html', form=form, admin=True)
 	
-@app.route('/signup', methods=['POST', 'GET'])
+'''@app.route('/signup', methods=['POST', 'GET'])
 def signup():
 	form = RegisterForm()
 	if form.validate_on_submit():
@@ -34,6 +34,7 @@ def signup():
 		db.session.commit()
 		return 'user has been created'
 	return render_template('signup.html', form=form, admin=True)
+	'''
 	
 @app.route('/logout')
 @login_required

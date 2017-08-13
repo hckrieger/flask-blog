@@ -5,24 +5,22 @@ from forms.posts import PostForm
 from forms.contact import ContactForm
 from flask_login import login_required, current_user
 
-	
+post = Post.query.order_by(Post.created_at.desc()).all()
+the_id = current_user.get_id()
+the_name = current_user.name
+
 @app.route('/dashboard')
 @login_required
 def dashboard():
-	post = Post.query.order_by(Post.created_at.desc()).all()
 	draft = Draft.query.order_by(Draft.created_at.desc()).all()
 	return render_template('dashboard.html', admin=True, post=post, draft=draft)
 
 @app.route('/')
 def index():
-	post = Post.query.order_by(Post.created_at.desc()).all()
 	return render_template('index.html', post=post)
-
-
 
 @app.route('/<slug>', methods=['POST', 'GET'])
 def select(slug):
-	post = Post.query.order_by(Post.created_at.desc()).all()
 	single = Post.query.filter_by(slug=slug).first_or_404()
 	return render_template('posts/select.html', single=single, post=post)
 	
@@ -33,23 +31,12 @@ def delete(slug):
 	db.session.delete(single)
 	db.session.commit()
 	return redirect(url_for('index'), admin=True)
-	
-@app.route('/about')
-def about():
-	post = Post.query.order_by(Post.created_at.desc()).all()
-	return render_template('about.html', post=post)
 
-@app.route('/contact')
-def contact():
-	post = Post.query.order_by(Post.created_at.desc()).all()
-	return render_template('contact.html', post=post)
 	
 @app.route('/dashboard/create_draft', methods=['POST', 'GET'])
 @login_required
 def create_draft():
 	form = PostForm()
-	the_id = current_user.get_id()
-	the_name = current_user.name
 	if form.validate_on_submit():
 		if form.create_draft.data:
 			draft = Draft(request.form['title'], request.form['slug'], request.form['body'], the_name, request.form['category'], the_id)
