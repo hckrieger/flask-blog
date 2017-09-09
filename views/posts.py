@@ -75,15 +75,17 @@ def update_draft(slug):
 	the_id = current_user.get_id()
 	the_name = current_user.name
 	
-	#if 
+	
 	if form.validate_on_submit():
-		if form.update_draft.data:
+		#Update the draft on submit
+		if form.update_draft.data: 
 			draft.title = request.form['title']
 			draft.slug = request.form['slug']
 			draft.category = request.form['category']
 			draft.body = request.form['body']
 			db.session.commit()
 			return redirect(url_for('dashboard'))
+		#Create as post and delete draft on submit
 		elif form.create_post.data:
 			post = Post(request.form['title'], request.form['slug'], request.form['body'], request.form['category'], the_name, the_id)
 			db.session.delete(draft)
