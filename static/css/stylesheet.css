@@ -21,7 +21,7 @@ div.jumbotron {
 	text-align: center;
 	color: black;
 	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #4b4b4b;
 	margin-bottom: 1em;
 }
 
